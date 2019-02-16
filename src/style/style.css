@@ -1,0 +1,70 @@
+
+/* css 选择器 */
+
+/* CSS 属性选择器 */
+/* 简单属性选择：例如，把包含标题（title）的所有元素变为红色 */
+*[title] {color:red;}
+/* 根据具体属性值选择：例如，将指向 Web 服务器上某个指定文档的超链接变成红色 */
+a[href="http://www.w3school.com.cn/about_us.asp"] {color: red;}
+/* 属性与属性值必须完全匹配： <p class="important warning">This paragraph is a very important warning.</p> */
+p[class="important warning"] {color: red;}
+/* 根据部分属性值选择 */
+p[class~="important"] {color: red;}
+/* 子串匹配属性选择器 */
+/*
+  [abc^="def"]  选择 abc 属性值以 "def" 开头的所有元素
+  [abc$="def"]	选择 abc 属性值以 "def" 结尾的所有元素
+  [abc*="def"]	选择 abc 属性值中包含子串 "def" 的所有元素
+*/
+/* 例如，对指向 W3School 的所有链接应用样式 */
+a[href*="w3school.com.cn"] {color: red;}
+/* 特定属性选择类型：例如，选择 lang 属性等于 en 或以 en- 开头的所有元素 */
+*[lang|="en"] {color: red;}
+
+/* 学习连接 */
+/* http://www.w3school.com.cn/css/css_selector_attribute.asp */
+
+/* CSS 后代选择器 */
+h1 em {color:red;}
+
+/* CSS 子元素选择器 */
+h1 > strong {color:red;}
+
+/* 结合后代选择器和子选择器 */
+table.company td > p
+
+/* CSS 相邻兄弟选择器 */
+h1 + p {margin-top:50px;}
+
+/* CSS 伪类 (Pseudo-classes) */
+/* 锚伪类 */
+a:link {color: #FF0000}		/* 未访问的链接 */
+a:visited {color: #00FF00}	/* 已访问的链接 */
+a:hover {color: #FF00FF}	/* 鼠标移动到链接上 */
+a:active {color: #0000FF}	/* 选定的链接 */
+/* CSS2 - :first-child 伪类(选择元素的第一个子元素) */
+li:first-child {text-transform:uppercase;}
+/* CSS2 - :lang 伪类(为不同的语言定义特殊的规则) */
+q:lang(no) { quotes: "~" "~" }
+/* CSS2 - :focus 伪类(向拥有键盘输入焦点的元素添加样式) */
+input:focus { color: yellow; }
+
+/* CSS 伪元素 (Pseudo-elements) */
+/* :first-line 伪元素(用于向文本的首行设置特殊样式) */
+p:first-line {
+  color:#ff0000;
+  font-variant:small-caps;
+}
+/* :first-letter 伪元素(用于向文本的首字母设置特殊样式) */
+p:first-letter {
+  color:#ff0000;
+  font-size:xx-large;
+}
+/* CSS2 - :before 伪元素(在元素的内容前面插入新内容) */
+h1:before {
+  content:url(logo.gif);
+}
+/* CSS2 - :after 伪元素(在元素的内容之后插入新内容) */
+h1:after {
+  content:url(logo.gif);
+}

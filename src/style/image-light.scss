@@ -1,0 +1,18 @@
+
+/* 图片灯箱 */
+.peony-image-light {
+  zoom: 1;
+  display: block;
+  margin: 10px 0;
+}
+
+.peony-image-light:before {
+  content: "";
+  display: table;
+}
+
+.peony-image-light:after {
+  content: "";
+  display: table;
+  clear: both;
+}

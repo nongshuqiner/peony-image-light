@@ -1,0 +1,37 @@
+/* BEM */
+/* block-name 块 */
+/* block-name__element-name 块__元素 */
+/* block-name_modifier-name 块_修饰符 在修饰符有值时使用，修饰尺寸，主题。外观，行为或状态 */
+/* block-name__element-name_modifier-name 块__元素_修饰符 */
+/* block-name_modifier-name_modifier-value 块_修饰符_修饰值 */
+/* block-name__element-name_modifier-name_modifier-value 块__元素_修饰符_修饰值 */
+
+$static: "";
+
+@import "image-light.scss";
+@import "image-gallery.scss";
+@import "image-magicbox.scss";
+@import "image-multibox.scss";
+@import "image-slider.scss";
+@import "image-thumbsnav.scss";
+@import "selectbox.scss";
+@import "./fonts/font-css/fontawesome-all.css";
+
+
+// 适应盒子
+.peony-adaptbox-container {
+  text-align: center;
+  &:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    width: 0;
+  }
+  & > .peony-adaptbox {
+    display: inline-block;
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+  }
+}

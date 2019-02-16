@@ -1,0 +1,157 @@
+/* ul, li {
+  margin: 0;
+  padding: 0;
+}
+ul, ol, menu{
+  list-style: none;
+  text-align: left;
+} */
+
+/* 画廊-图片列表 */
+.peony-image-gallery {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+  zoom: 1;
+  &:before, &:after { content: ""; display: table; }
+  &:after {clear: both;}
+  /* 画廊-图片子项 */
+  li {
+    position: relative;
+    top: 0;
+    zoom: 1;
+    float: left;
+    border: 1px solid #dcdfe6;
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    &:before, &:after { content: ""; display: table; }
+    &:after {clear: both;}
+    &:hover {
+      top: -2px;
+      box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+    }
+    &:hover .peony-image-gallery__tools {height: 30px;}
+
+    /* 工具盒子 */
+    & > .peony-image-gallery__tools {
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      transition: all 0.8s;
+      z-index: 2;
+      ease-in: cubic-bezier(0.42, 0, 1.0, 1.0);
+      height: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      .icon {
+        display: block;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        margin: 5px 1px 1px;
+        text-align: center;
+        cursor: pointer;
+        float: right;
+        overflow: hidden;
+        font-size: 14px;
+        color: #fff;
+        &:hover {
+          color: #5AC5FF
+        }
+      }
+    }
+
+    /* 图片标记 */
+    .peony-image-gallery__badge {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 1;
+      display: block;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      color: #fff;
+      overflow: hidden;
+      text-align: center;
+      border-radius: 50%;
+      font-size: 12px;
+      background: #d2d6de;
+    }
+    .peony-image-gallery__badge.is-type-info { background: #00c0ef; }
+    .peony-image-gallery__badge.is-type-hot { background: #f36f72; }
+    .peony-image-gallery__badge.is-type-danger { background: #FF4949; }
+    .peony-image-gallery__badge.is-type-gray { background: #d2d6de; }
+    .peony-image-gallery__badge.is-type-warning { background: #F7BA2A; }
+    .peony-image-gallery__badge.is-type-success { background: #13CE66; }
+
+    /* 图片盒子 */
+    .peony-image-gallery__photo {
+      position: relative;
+      display: block;
+      margin: 0 auto;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      .light-img {
+        opacity: 0;
+      }
+    }
+
+    /* 填充适应盒子 */
+    .peony-image-gallery__images-adaptbox {
+      text-align: center;
+      &:before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        width: 0;
+      }
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        vertical-align: middle;
+      }
+    }
+
+    /* 图片字幕 */
+    .peony-image-gallery__caption {
+      padding: 10px;
+      margin: 0;
+      width: 100%;
+      font-size: 14px;
+      font-weight: 400;
+      box-sizing: border-box;
+      line-height: 1.2;
+      text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    /* 描述 */
+    .peony-image-gallery__describe {
+      font-size: 12px;
+      line-height: 20px;
+      margin: 0 auto;
+      padding-top: 0;
+      padding: 10px;
+      width: 100%;
+      font-size: 14px;
+      font-weight: 400;
+      box-sizing: border-box;
+      line-height: 1.2;
+      text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}

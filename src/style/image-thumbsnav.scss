@@ -1,0 +1,116 @@
+.peony-image-thumbsnav {
+  width: 100%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  .thumbsnav-arrow { // 滚动控制按钮
+    width: 30px;
+    height: 100%;
+    float: left;
+    position: relative;
+    cursor: pointer;
+    i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      // transform: translateY(-50%);
+      // -webkit-transform: translateY(-50%);
+      text-align: center;
+      font-size: 22px;
+      font-weight: 900;
+      opacity: 0.8;
+    }
+    i.disable {
+      opacity: 0.4;
+      &:hover { opacity: 0.4; }
+    }
+  }
+  .circle {
+    i {
+      border-radius: 50%;
+      background: #dfdfdf;
+      color: rgba(#000, 1);
+      &:hover { opacity: 1; }
+    }
+  }
+  .rectangle {
+    background: rgba(#000, 0.9);
+    &:hover {
+      background: rgba(#000, 1);
+      i {
+        opacity: 1;
+        background: #333;
+      }
+      i.disable {
+        opacity: 0.4;
+        background: transparent;
+      }
+    }
+    i {
+      color: rgba(#fff, 1);
+      &:hover { background: #444; }
+    }
+  }
+  .thumbsnav-arrow-right {
+    margin-left: 10px;
+    i { padding-left: 2px; }
+  }
+  .thumbsnav-arrow-left {
+    margin-right: 10px;
+    i { padding-right: 2px; }
+  }
+  .peony-image-thumbsnav__list { // 图片缩略导航列表
+    overflow: hidden;
+    height: 100%;
+    width: calc(100% - 80px);
+    float: left;
+    ul {
+      height: 100%;
+      text-align: center;
+      white-space: nowrap;
+      list-style: none !important;
+      transition: all .5s ease;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        position: relative;
+        height: 100%;
+        display: inline-block;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-clip: content-box;
+        background-color: #9f9f9f;
+        cursor: pointer;
+        overflow: hidden;
+        box-shadow: 0 0 4px rgba(10, 10, 10, 0.45);
+        // transform: scale(0.83) translateZ(0);
+        // -webkit-transform: scale(0.83) translateZ(0);
+        // -ms-transform: scale(0.83) translateZ(0);
+        transition: all .25s ease;
+        -webkit-transition: all .25s ease;
+        opacity: 0.6;
+        &:hover {
+          opacity: 1;
+          // -webkit-transform: scale(.97);
+          // transform: scale(.97);
+        }
+        img {
+          opacity: 0;
+        }
+      }
+      li:first-child { margin-left: 0px !important; }
+      // 如果选中
+      li.select-scale {
+        opacity: 1;
+        // -webkit-transform: scale(.97); transform: scale(.97);
+      }
+    }
+  }
+}

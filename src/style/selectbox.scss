@@ -1,0 +1,108 @@
+/* 选择盒子 */
+.peony-selectbox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* checkbox选择框 */
+.peony-selectbox > .peony-selectbox__input {
+  display: none;
+}
+
+/* 选中开启的遮罩层 */
+.peony-selectbox > .peony-selectbox__mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  text-align: center;
+  line-height: 180px;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+}
+.peony-selectbox > .peony-selectbox__mask.no-disabled {
+  background: rgba(255, 255, 255, .4);
+}
+.peony-selectbox > .peony-selectbox__mask.no-disabled:before {
+  content: "点击选择";
+}
+
+/* 禁用 */
+.peony-selectbox > .peony-selectbox__mask.is-disabled {
+  background: rgba(238, 241, 246, 0.6);
+}
+.peony-selectbox > .peony-selectbox__mask.is-disabled:before {
+  content: "禁止选中";
+}
+
+/* 复选框盒子 */
+.peony-selectbox .peony-selectbox__check {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  outline: none;
+  vertical-align: middle;
+}
+
+/* 复选框 */
+.peony-selectbox .peony-selectbox__check .peony-selectbox__check_tick {
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  white-space: nowrap;
+  cursor: pointer;
+  border: 1px solid #777;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: #fff;
+}
+.peony-selectbox .peony-selectbox__check .peony-selectbox__check_tick::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 2px;
+  height: 12px;
+  width: 5px;
+  border: 2.6px solid #fff;
+  border-left: 0;
+  border-top: 0;
+  box-sizing: content-box;
+  transform: rotate(45deg) scaleY(0);
+}
+
+/* 选中 */
+/* 遮罩层颜色加深 */
+.peony-selectbox input:checked + .peony-selectbox__mask {
+  background: rgba(51, 51, 51, .5);
+}
+/* 遮罩层文字变化 */
+.peony-selectbox input:checked + .peony-selectbox__mask:before {
+  content: "点击取消选择";
+}
+/* 复选框盒子 */
+.peony-selectbox input:checked + .peony-selectbox__mask + .peony-selectbox__check .peony-selectbox__check_tick {
+  border-color: #13Cc00;
+  background-color: #13CE66;
+}
+/* 复选框 */
+.peony-selectbox input:checked + .peony-selectbox__mask + .peony-selectbox__check .peony-selectbox__check_tick::after {
+  transform: rotate(45deg) scaleY(1);
+}

@@ -1,0 +1,115 @@
+.peony-image-magicbox {
+  position: relative;
+  // width: 75%;
+  // height: 98%;
+  // max-width: 1148px;
+  // max-height: 760px;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  background: #000;
+  border-radius: 5px;
+  box-sizing: border-box;
+  .peony-image-magicbox__wrap {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    background: #000;
+    .peony-image-magicbox__canvas { // 画布
+      position: relative;
+      height: 100%;
+      width: 100%;
+      .magicbox__canvas-warp { // 背景图片盒子
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        // 填充适应盒子--------------
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      // 图片字幕
+      .magicbox__canvas-caption {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 42px;
+        line-height: 42px;
+        width: 100%;
+        padding-left: 12px;
+        font-size: 16px;
+        text-align: left;
+        display: block;
+        color: #fff;
+        font-weight: 900;
+        box-sizing: border-box;
+      }
+      .magicbox__canvas-convert { // 转换
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: none;
+        width: 24px;
+        height: 24px;
+        background: rgba(#000, 0.45);
+        line-height: 24px;
+        text-align: center;
+        color: #fff;
+        font-size: 14px;
+      }
+      // 图片工具
+      .magicbox__canvas-utils {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 42px;
+        background: rgba(#333, .7);
+        transition: all 0.8s;
+        padding: 5px;
+        box-sizing: border-box;
+        text-align: left;
+        .icon {
+          display: inline-block;
+          width: 32px;
+          height: 32px;
+          margin-right: 15px;
+          float: left;
+          line-height: 32px;
+          text-align: center;
+          font-size: 18px;
+          color: #fff;
+          border-radius: 5px;
+          &:hover {
+            background: rgba(#fff, .1);
+          }
+        }
+      }
+      .magicbox__canvas-utils { opacity: 0; }
+      &:hover {
+        .magicbox__canvas-convert { display: inline-block; }
+        .magicbox__canvas-utils { opacity: 1; }
+      }
+    }
+    .peony-image-thumbsnav { // 图片缩略导航
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  .peony-image-magicbox__more { // 显示更多信息
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #f5f5f5;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+}
