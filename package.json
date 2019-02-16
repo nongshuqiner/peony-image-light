@@ -1,7 +1,7 @@
 {
   "name": "peony-image-light",
   "description": "A Vue image light Component(一个vue的图片灯箱组件)",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "nongshuqiner <ym1185509297@163.com>",
   "license": "MIT",
   "main": "dist/peony-image-light.js",
