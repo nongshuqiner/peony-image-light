@@ -223,12 +223,12 @@ export default {
     mouseupEvent (event) { // 鼠标松开事件
       var el = event.target || event.srcElement // el
       el.removeEventListener('mousemove', this.mousemoveEvent)
-      console.log('鼠标松开事件: 需要removeEventListener鼠标移动事件')
+      // console.log('鼠标松开事件: 需要removeEventListener鼠标移动事件')
     },
     mouseoutEvent (event) { // 鼠标离开事件
       var el = event.target || event.srcElement // el
       el.removeEventListener('mousemove', this.mousemoveEvent)
-      console.log('鼠标离开事件: 需要removeEventListener鼠标移动事件')
+      // console.log('鼠标离开事件: 需要removeEventListener鼠标移动事件')
     }
   }
 }

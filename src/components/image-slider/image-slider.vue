@@ -68,9 +68,7 @@ export default {
       ZIndex: 'auto' // z-index层级
     }
   },
-  created () {
-    console.log(this)
-  },
+  created () {},
   watch: {
     index () { // 当index变化时,相关数据重置
       // this.$emit('change', this.index, this.list)

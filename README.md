@@ -20,8 +20,8 @@ Namely：
 
 ``` js
 import PeonyImageLight from 'peony-image-light'
-// 或者 const PeonyImageLight = require('peony-image-light')
-// 或者 <script src="..."></script>
+// 或者 const PeonyImageLight = require('peony-image-light').default
+// 或者 <script src="//unpkg.com/peony-circle@1.0.3/dist/peony-image-light.js"></script>
 Vue.use(PeonyImageLight)
 ```
 

@@ -63,7 +63,7 @@ export default {
   },
   methods: {
     openEvent (index, item) {
-      console.log('openEvent', index, item)
+      // console.log('openEvent', index, item)
       this.index = index
       this.$refs['image-slider'].openSlider()
     },
